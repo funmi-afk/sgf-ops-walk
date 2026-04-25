@@ -142,6 +142,7 @@
   /* FUTURE STATE SPECIFIC */
   .pillar{background:var(--surface);border:0.5px solid var(--border);border-radius:12px;padding:20px;position:relative;overflow:hidden}
   .pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+  .pillar-intraday::before{background:linear-gradient(90deg,#0891b2,#2563eb)}
   .pillar-coaching::before{background:linear-gradient(90deg,#2563eb,#7c3aed)}
   .pillar-rigor::before{background:linear-gradient(90deg,#7c3aed,#db2777)}
   .pillar-ideation::before{background:linear-gradient(90deg,#db2777,#ea580c)}
@@ -997,35 +998,35 @@ const STATIONS = [
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
           <div>
             <div class="ic-label" style="margin-bottom:2px">Top coaching opportunities — 5-week trend</div>
-            <div style="font-size:11px;color:var(--ink3)">All categories visible in the bar with WoW direction; cards below zoom in on the <strong style="color:var(--ink)">top 4 priorities</strong>. Transfer-related issues (TLAC + failed CPhT/RPH) together account for ~60% of all coachings.</div>
+            <div style="font-size:11px;color:var(--ink3)">All categories visible in the bar with WoW direction; cards below zoom in on the <strong style="color:var(--ink)">top 4 priorities</strong>. Transfer-related issues (TLAC + failed CPhT/RPH) together account for ~77% of all coachings.</div>
           </div>
-          <span class="pill pill-b">411 total · last 5 wks</span>
+          <span class="pill pill-b">374 total · last 5 wks</span>
         </div>
 
         <!-- CATEGORY BREAKDOWN BAR CHART -->
         <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:14px">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
             <div style="font-size:11px;font-weight:600;color:var(--ink2);letter-spacing:0.04em;text-transform:uppercase">All coaching categories · last 5 weeks</div>
-            <div style="font-size:10px;color:var(--ink3);font-family:var(--mono)">411 total coachings</div>
+            <div style="font-size:10px;color:var(--ink3);font-family:var(--mono)">374 total coachings</div>
           </div>
 
           <!-- Horizontal stacked bar -->
           <div style="display:flex;height:48px;border-radius:6px;overflow:hidden;border:0.5px solid var(--border)">
-            <div style="width:44.04%;background:#e24b4a;display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px;font-weight:600" title="TLAC referral misuse · 181 · trending up"><span>181</span><span style="font-size:13px;line-height:1">↑</span></div>
-            <div style="width:15.09%;background:#ef9f27;display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px;font-weight:600" title="Failed CPhT/RPH transfer · 62 · trending up"><span>62</span><span style="font-size:13px;line-height:1">↑</span></div>
-            <div style="width:11.92%;background:#7c3aed;display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px;font-weight:600" title="Documentation gaps · 49 · stable"><span>49</span><span style="font-size:13px;line-height:1">→</span></div>
-            <div style="width:9.49%;background:#1a5fbf;display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px;font-weight:600" title="Adherence / call avoidance · 39 · trending up"><span>39</span><span style="font-size:13px;line-height:1">↑</span></div>
-            <div style="width:7.06%;background:#0891b2;display:flex;align-items:center;justify-content:center;gap:3px;color:#fff;font-size:11px;font-weight:600" title="Patient verification · 29 · stable"><span>29</span><span style="font-size:12px;line-height:1">→</span></div>
-            <div style="width:5.84%;background:#a05a00;display:flex;align-items:center;justify-content:center;gap:3px;color:#fff;font-size:11px;font-weight:600" title="Tone / soft skills · 24 · stable"><span>24</span><span style="font-size:12px;line-height:1">→</span></div>
-            <div style="width:3.41%;background:#db2777;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600" title="Improper escalation · 14 · trending down (win)">14↓</div>
-            <div style="width:3.16%;background:#8b8fa8;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600" title="Other · 13">13</div>
+            <div style="width:47.86%;background:#e24b4a;display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px;font-weight:600" title="Failed CPhT/RPH transfer · 179 · trending up"><span>179</span><span style="font-size:13px;line-height:1">↑</span></div>
+            <div style="width:29.14%;background:#ef9f27;display:flex;align-items:center;justify-content:center;gap:4px;color:#fff;font-size:12px;font-weight:600" title="TLAC referral misuse · 109 · trending up"><span>109</span><span style="font-size:13px;line-height:1">↑</span></div>
+            <div style="width:6.68%;background:#7c3aed;display:flex;align-items:center;justify-content:center;gap:3px;color:#fff;font-size:11px;font-weight:600" title="Documentation gaps · 25 · stable"><span>25</span><span style="font-size:12px;line-height:1">→</span></div>
+            <div style="width:5.35%;background:#1a5fbf;display:flex;align-items:center;justify-content:center;gap:3px;color:#fff;font-size:11px;font-weight:600" title="Adherence / call avoidance · 20 · trending up"><span>20</span><span style="font-size:12px;line-height:1">↑</span></div>
+            <div style="width:4.01%;background:#0891b2;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600" title="Patient verification · 15 · stable">15</div>
+            <div style="width:3.21%;background:#a05a00;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600" title="Tone / soft skills · 12 · stable">12</div>
+            <div style="width:1.87%;background:#db2777;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600" title="Improper escalation · 7 · trending down (win)">7↓</div>
+            <div style="width:1.87%;background:#8b8fa8;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600" title="Other · 7">7</div>
           </div>
 
           <!-- Transfer-related grouping bracket -->
           <div style="display:flex;margin-top:6px;height:14px;align-items:flex-start">
-            <div style="width:59.13%;display:flex;flex-direction:column;align-items:center">
+            <div style="width:77.00%;display:flex;flex-direction:column;align-items:center">
               <div style="width:100%;height:6px;border-left:1.5px solid var(--ink2);border-right:1.5px solid var(--ink2);border-bottom:1.5px solid var(--ink2);border-radius:0 0 4px 4px"></div>
-              <div style="font-size:10px;color:var(--ink2);font-weight:600;margin-top:2px">Transfer-related · 243 coachings · ~60%</div>
+              <div style="font-size:10px;color:var(--ink2);font-weight:600;margin-top:2px">Transfer-related · 288 coachings · ~77%</div>
             </div>
             <div style="flex:1"></div>
           </div>
@@ -1040,30 +1041,30 @@ const STATIONS = [
 
           <!-- Legend -->
           <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:8px;margin-top:12px">
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#e24b4a;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">TLAC referral misuse</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">44%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#ef9f27;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Failed CPhT/RPH transfer</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">15%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#7c3aed;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Documentation gaps</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">12%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#1a5fbf;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Adherence / call avoidance</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">9%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#0891b2;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Patient verification</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">7%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#a05a00;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Tone / soft skills</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">6%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#db2777;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Improper escalation</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">3%</span></div>
-            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#8b8fa8;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Other</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">3%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#e24b4a;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Failed CPhT/RPH transfer</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">48%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#ef9f27;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">TLAC referral misuse</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">29%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#7c3aed;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Documentation gaps</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">7%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#1a5fbf;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Adherence / call avoidance</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">5%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#0891b2;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Patient verification</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">4%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#a05a00;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Tone / soft skills</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">3%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#db2777;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Improper escalation</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">2%</span></div>
+            <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#8b8fa8;flex-shrink:0"></div><span style="font-size:11px;color:var(--ink2)">Other</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">2%</span></div>
           </div>
         </div>
 
         <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px;margin-top:6px">Top 4 priorities · weekly trend</div>
         <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:10px">
 
-          <!-- Theme 1: TLAC referral misuse -->
+          <!-- Theme 1: Failed CPhT/RPH transfer (now #1) -->
           <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 12px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:4px">
               <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--red);background:var(--red-bg);padding:2px 5px;border-radius:4px;white-space:nowrap">#1</span>
-              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">44%</span>
+              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">48%</span>
             </div>
-            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25">TLAC referral misuse</div>
-            <div style="font-size:10px;color:var(--ink3);margin-bottom:8px;line-height:1.4;min-height:42px">Transfer not needed, wrong department, incorrect criteria</div>
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25">Failed CPhT / RPH transfer</div>
+            <div style="font-size:10px;color:var(--ink3);margin-bottom:8px;line-height:1.4;min-height:42px">Ticket not marked correctly, transfer process not followed</div>
             <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:8px">
-              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">181</div>
+              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">179</div>
               <div style="font-size:10px;color:var(--ink3)">coachings</div>
             </div>
 
@@ -1076,11 +1077,11 @@ const STATIONS = [
               <div style="flex:1;display:flex;justify-content:center;align-items:flex-end;height:100%"><div style="width:55%;height:25px;background:#e24b4a;border-radius:2px 2px 0 0"></div></div>
             </div>
             <div style="display:flex;gap:4px;padding:4px 4px 0;border-top:0.5px solid var(--border);margin-top:3px">
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">7</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">31</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">91</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">6</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">46</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">14</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">38</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">52</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">26</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">49</div>
             </div>
             <div style="display:flex;gap:4px;padding:3px 4px 0">
               <div style="flex:1;text-align:center;font-size:8px;color:var(--ink3);white-space:nowrap">21 Mar</div>
@@ -1091,16 +1092,16 @@ const STATIONS = [
             </div>
           </div>
 
-          <!-- Theme 2: Failed transfers -->
+          <!-- Theme 2: TLAC referral misuse (now #2) -->
           <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 12px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:4px">
               <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--amber);background:var(--amber-bg);padding:2px 5px;border-radius:4px;white-space:nowrap">#2</span>
-              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">15%</span>
+              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">29%</span>
             </div>
-            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25">Failed CPhT / RPH transfer</div>
-            <div style="font-size:10px;color:var(--ink3);margin-bottom:8px;line-height:1.4;min-height:42px">Ticket not marked correctly, transfer process not followed</div>
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25">TLAC referral misuse</div>
+            <div style="font-size:10px;color:var(--ink3);margin-bottom:8px;line-height:1.4;min-height:42px">Transfer not needed, wrong department, incorrect criteria</div>
             <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:8px">
-              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">62</div>
+              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">109</div>
               <div style="font-size:10px;color:var(--ink3)">coachings</div>
             </div>
 
@@ -1112,11 +1113,11 @@ const STATIONS = [
               <div style="flex:1;display:flex;justify-content:center;align-items:flex-end;height:100%"><div style="width:55%;height:29px;background:#ef9f27;border-radius:2px 2px 0 0"></div></div>
             </div>
             <div style="display:flex;gap:4px;padding:4px 4px 0;border-top:0.5px solid var(--border);margin-top:3px">
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">0</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">21</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">15</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">11</div>
-              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">15</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">5</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">31</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">23</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">17</div>
+              <div style="flex:1;text-align:center;font-size:9px;color:var(--ink3)">23</div>
             </div>
             <div style="display:flex;gap:4px;padding:3px 4px 0">
               <div style="flex:1;text-align:center;font-size:8px;color:var(--ink3);white-space:nowrap">21 Mar</div>
@@ -1131,12 +1132,12 @@ const STATIONS = [
           <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 12px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:4px">
               <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6d28d9;background:#ede9fe;padding:2px 5px;border-radius:4px;white-space:nowrap">#3</span>
-              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">12%</span>
+              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">7%</span>
             </div>
             <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25">Documentation gaps</div>
             <div style="font-size:10px;color:var(--ink3);margin-bottom:8px;line-height:1.4;min-height:42px">Missing notes, incomplete tickets, no callback record</div>
             <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:8px">
-              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">49</div>
+              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">25</div>
               <div style="font-size:10px;color:var(--ink3)">coachings</div>
             </div>
 
@@ -1168,12 +1169,12 @@ const STATIONS = [
           <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 12px">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:4px">
               <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#1a5fbf;background:#e8effc;padding:2px 5px;border-radius:4px;white-space:nowrap">#4</span>
-              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">9%</span>
+              <span style="font-size:9px;color:var(--ink3);font-family:var(--mono)">5%</span>
             </div>
             <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25">Adherence / call avoidance</div>
             <div style="font-size:10px;color:var(--ink3);margin-bottom:8px;line-height:1.4;min-height:42px">Off-status during shift, intentional skips, idle time</div>
             <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:8px">
-              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">39</div>
+              <div style="font-size:22px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em">20</div>
               <div style="font-size:10px;color:var(--ink3)">coachings · ↑ W1→W5</div>
             </div>
 
@@ -1215,31 +1216,31 @@ const STATIONS = [
         <!-- Insight callout -->
         <div style="margin-top:12px;padding:10px 12px;background:#fef3c7;border:0.5px solid #fcd34d;border-radius:8px;display:flex;gap:10px;align-items:flex-start">
           <div style="font-size:14px;line-height:1">💡</div>
-          <div style="font-size:11px;color:var(--ink2);line-height:1.5"><strong style="color:var(--ink)">Insight:</strong> Transfer-related issues are the dominant coaching theme — TLAC misuse on its own (44%) and failed CPhT/RPH transfers (15%) together cover ~60% of all activity. Both call for a targeted training intervention, not just case-by-case coaching.</div>
+          <div style="font-size:11px;color:var(--ink2);line-height:1.5"><strong style="color:var(--ink)">Insight:</strong> Transfer-related issues dominate the coaching agenda — failed CPhT/RPH transfers (48%) and TLAC misuse (29%) together cover ~77% of all activity. Both call for a targeted training intervention, not just case-by-case coaching.</div>
         </div>
       </div>
 
       <!-- KPI TILES -->
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px">
         <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
-          <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Coaching requests this week</div>
-          <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em;text-align:center">90</div>
+          <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Coachings completed · 5 wks</div>
+          <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em;text-align:center">374</div>
           <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
-            <div style="text-align:center;background:var(--amber-bg);border:0.5px solid #fcd34d;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--amber)">↑ +73% WoW (52 → 90)</div>
+            <div style="text-align:center;background:var(--green-bg);border:0.5px solid #86efac;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--green)">Active agents · 3 streams</div>
           </div>
         </div>
         <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
-          <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Coachings delivered this week</div>
-          <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--green);letter-spacing:-0.03em;text-align:center">146</div>
+          <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Delivery rate</div>
+          <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--green);letter-spacing:-0.03em;text-align:center">99.6%</div>
           <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
-            <div style="text-align:center;background:var(--green-bg);border:0.5px solid #86efac;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--green)">↑ +113 WoW (backlog cleared)</div>
+            <div style="text-align:center;background:var(--green-bg);border:0.5px solid #86efac;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--green)">488 of 490 closed · 14 wks</div>
           </div>
         </div>
         <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
-          <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Pending coaching</div>
-          <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em;text-align:center">101</div>
+          <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Active backlog</div>
+          <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em;text-align:center">2</div>
           <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
-            <div style="text-align:center;background:var(--red-bg);border:0.5px solid #f0a0a0;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--red)">Backlog to work through</div>
+            <div style="text-align:center;background:var(--amber-bg);border:0.5px solid #fcd34d;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--amber)">Coaching not yet delivered</div>
           </div>
         </div>
       </div>
@@ -1318,7 +1319,7 @@ const STATIONS = [
     future: true,
     icon: "🔭",
     eyebrow: "Station 4 of 4 · Where we are going",
-    title: "Enhancement mode — the next 6–8 weeks",
+    title: "Enhancement mode — the next 4–6 weeks",
     shortLabel: "Future state",
     desc: "The last 90 days were about setting up shop — training waves, headcount, foundational systems. We're now entering steady state. This is what we're building next.",
     render: () => `
@@ -1337,7 +1338,7 @@ const STATIONS = [
           </div>
           <div class="tl-item">
             <div class="tl-dot tl-dot-future">→</div>
-            <div class="tl-label"><strong>6–8 weeks</strong>Coaching standard<br>PM framework<br>Agent voice loop</div>
+            <div class="tl-label"><strong>4–6 weeks</strong>Intraday rhythm<br>Coaching standard<br>PM framework<br>Agent voice loop</div>
           </div>
           <div class="tl-item">
             <div class="tl-dot tl-dot-future">→</div>
@@ -1349,57 +1350,267 @@ const STATIONS = [
       <!-- CONNECTING NARRATIVE -->
       <div class="future-inner" style="margin-bottom:20px;background:linear-gradient(135deg,#f5f3ff 0%,#ede9fe 100%);border:0.5px solid #c4b5fd">
         <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4338ca;margin-bottom:10px">The big picture</div>
-        <div style="font-size:16px;font-weight:500;color:var(--ink);line-height:1.5;margin-bottom:14px;letter-spacing:-0.01em">Our goal is a management system where the floor gets better on its own — three mutually-reinforcing mechanisms make that happen.</div>
+        <div style="font-size:16px;font-weight:500;color:var(--ink);line-height:1.5;margin-bottom:14px;letter-spacing:-0.01em">Four pillars + one connecting artefact. The agent scorecard sits between coaching and performance management — it's where every input lands, and what every conversation reads from.</div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px">
-          <div style="text-align:center">
-            <div style="font-size:22px;margin-bottom:6px">↓</div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:4px">Coaching</div>
-            <div style="font-size:11px;color:var(--ink2);line-height:1.5">How we move an agent <em>toward</em> the standard. The quality of every conversation.</div>
+        <!-- Visual flow: 4 pillars with scorecard bridge -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1.3fr 1fr 1fr;gap:8px;margin-top:14px;align-items:center">
+          <div style="text-align:center;padding:10px 6px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border)">
+            <div style="font-size:18px;margin-bottom:4px">◉</div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0891b2;margin-bottom:3px">01 · Intraday</div>
+            <div style="font-size:10px;color:var(--ink2);line-height:1.4">Daily pulse</div>
           </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;margin-bottom:6px">◆</div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#a21caf;margin-bottom:4px">Rigor</div>
-            <div style="font-size:11px;color:var(--ink2);line-height:1.5">What the standard <em>is</em>. The floor we hold, the path we follow when it's not met.</div>
+          <div style="text-align:center;padding:10px 6px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border)">
+            <div style="font-size:18px;margin-bottom:4px">↓</div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:3px">02 · Coaching</div>
+            <div style="font-size:10px;color:var(--ink2);line-height:1.4">Move toward standard</div>
           </div>
-          <div style="text-align:center">
-            <div style="font-size:22px;margin-bottom:6px">↑</div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#c2410c;margin-bottom:4px">Voice</div>
-            <div style="font-size:11px;color:var(--ink2);line-height:1.5">The signal from the floor that keeps both <em>calibrated</em> to reality.</div>
+          <!-- BRIDGE: SCORECARD -->
+          <div style="text-align:center;padding:12px 8px;background:linear-gradient(135deg,#fef9c3,#fde68a);border-radius:10px;border:1px solid #f59e0b;position:relative;box-shadow:0 1px 4px rgba(245,158,11,0.15)">
+            <div style="position:absolute;top:-7px;left:50%;transform:translateX(-50%);font-size:8px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:#f59e0b;color:#fff;padding:2px 8px;border-radius:4px;white-space:nowrap">The bridge</div>
+            <div style="font-size:18px;margin-bottom:4px;margin-top:4px">📋</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#92400e;margin-bottom:3px">Agent Scorecard</div>
+            <div style="font-size:10px;color:#78350f;line-height:1.4;font-weight:500">Stats · escalations · QA · status</div>
+          </div>
+          <div style="text-align:center;padding:10px 6px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border)">
+            <div style="font-size:18px;margin-bottom:4px">◆</div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#a21caf;margin-bottom:3px">03 · PM Framework</div>
+            <div style="font-size:10px;color:var(--ink2);line-height:1.4">Reads from scorecard</div>
+          </div>
+          <div style="text-align:center;padding:10px 6px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border)">
+            <div style="font-size:18px;margin-bottom:4px">↑</div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#c2410c;margin-bottom:3px">04 · Voice</div>
+            <div style="font-size:10px;color:var(--ink2);line-height:1.4">Calibration signal</div>
           </div>
         </div>
 
         <div style="margin-top:16px;padding-top:14px;border-top:0.5px solid var(--border);font-size:12px;color:var(--ink2);line-height:1.6">
-          Without rigor, coaching has no direction. Without coaching, rigor becomes rules without support. Without agent voice, we're flying blind — building a system disconnected from what's actually happening on the floor. All three together is what makes the management layer self-correcting.
+          Intraday keeps the floor on plan today. Coaching moves individuals toward the standard. The scorecard captures every input — QA scores, escalation call-outs, signed acknowledgments, agent progress — and gives both the TL and the agent a single weekly view. The PM framework reads from it. Voice keeps all of it calibrated to what's actually happening on the floor.
         </div>
       </div>
 
       <!-- THREE PILLARS - stacked vertically for full-width breathing room -->
       <div style="display:flex;flex-direction:column;gap:14px">
 
-        <!-- PILLAR 1: COACHING -->
-        <div class="pillar pillar-coaching">
-          <div class="pillar-num" style="color:#2563eb">01 — Coaching effectiveness</div>
-          <div class="pillar-title" style="color:var(--ink)">From reactive to systematic</div>
-          <div class="pillar-sub">Coaching is the cornerstone. Right now it's triggered by GH and measured by completion. We're building a standard for what good looks like — and a way to grade it.</div>
+        <!-- PILLAR 1: INTRADAY MANAGEMENT -->
+        <div class="pillar pillar-intraday">
+          <div class="pillar-num" style="color:#0891b2">01 — Intraday management</div>
+          <div class="pillar-title" style="color:var(--ink)">Managing today, today</div>
+          <div class="pillar-sub">Adherence here runs lower than other sites and stats can drift mid-shift if no one is watching. Coaching and performance frameworks work on weekly-plus cycles — intraday is what keeps the floor on plan right now. Three levers, every shift — anchored on a strong mid-shift check-in.</div>
 
           <!-- TODAY vs FUTURE -->
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
             <div class="compare-row compare-now" style="margin-bottom:0">
               <div class="compare-label now-label">Today</div>
-              <div class="compare-text">GH-triggered, often 2–3 weeks old. Compliance coaching separate from performance. No call listening at scale. Monitored by email cc only — Amanda knows it happened, not how well.</div>
+              <div class="compare-text">No morning huddle. Adherence reviewed after-the-fact, not during shift. Stats drift mid-shift goes unnoticed until end-of-day. Shift handoffs informal — morning shift's signal doesn't always make it to the afternoon team.</div>
             </div>
             <div class="compare-row compare-future" style="margin-bottom:0">
-              <div class="compare-label future-label">In 6–8 weeks</div>
-              <div class="compare-text">Hugo model as the house standard. Every coaching session graded. Team leads monitored on quality, not just volume. Effectiveness measured by whether the agent's metrics moved.</div>
+              <div class="compare-label future-label">In 4–6 weeks</div>
+              <div class="compare-text">Morning huddle sets the day 15 mins before shift start. Mid-shift check-in does the real operational work — adherence, stats, course-correction, and shift-to-shift handoff. Floor leader playbook runs against three triggers: stats slipping, queue rising, shift handover.</div>
             </div>
           </div>
 
           <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
 
+          <!-- 3-LEVER GRID -->
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0891b2;margin-bottom:8px">The three daily levers</div>
+          <div style="font-size:11px;color:var(--ink2);margin-bottom:14px">Each runs on a fixed cadence. Ops Manager owns the structure; TLs own the execution. Continuous real-time monitoring is unrealistic — TLs are coaching. The mid-shift check-in is where adherence, stats, and shift coordination converge.</div>
+
+          <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:10px">
+
+            <!-- Lever 1: Morning huddle -->
+            <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 14px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <div style="width:28px;height:28px;border-radius:50%;background:#e0f2fe;border:1px solid #0891b2;color:#0891b2;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">01</div>
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0891b2;background:#e0f2fe;padding:2px 7px;border-radius:4px;white-space:nowrap">15 min · 7:45 am</div>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">Morning huddle</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:10px">Ops Manager + TLs, 15 mins before shift start. Yesterday's stats, today's plan, where we need to pull weight, attendance and staffing gaps, what levers to pull.</div>
+              <div style="padding-top:8px;border-top:0.5px solid var(--border)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px">Agenda</div>
+                <div style="font-size:11px;color:var(--ink);line-height:1.45">Yesterday's stat recap · Who's in / who's out · Gap vs forecast · Levers to pull (VTO, OT, queue reroute) · Today's focus.</div>
+              </div>
+            </div>
+
+            <!-- Lever 2: Mid-shift check-in (THE HEADLINE) -->
+            <div style="background:var(--surface);border:1px solid #0891b2;border-radius:10px;padding:14px 14px;box-shadow:0 1px 3px rgba(8,145,178,0.1)">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <div style="width:28px;height:28px;border-radius:50%;background:#0891b2;border:1px solid #0891b2;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">02</div>
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0891b2;background:#e0f2fe;padding:2px 7px;border-radius:4px;white-space:nowrap">Mid-shift · the hinge</div>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">Mid-shift check-in</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:10px">The operational hinge. Where adherence drift gets caught, where the morning shift hands the baton to the afternoon team, where course corrections happen before the day is decided.</div>
+              <div style="padding-top:8px;border-top:0.5px solid var(--border)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px">Three jobs at once</div>
+                <div style="font-size:11px;color:var(--ink);line-height:1.45"><strong>Check:</strong> adherence · CSAT · stats vs forecast.<br><strong>Correct:</strong> redirect anyone trending red.<br><strong>Hand off:</strong> brief the afternoon TLs on what's live, what's at risk, who needs attention.</div>
+              </div>
+            </div>
+
+            <!-- Lever 3: Floor leader execution playbook -->
+            <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 14px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <div style="width:28px;height:28px;border-radius:50%;background:#e0f2fe;border:1px solid #0891b2;color:#0891b2;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">03</div>
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0891b2;background:#e0f2fe;padding:2px 7px;border-radius:4px;white-space:nowrap">On trigger</div>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">Floor leader execution playbook</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:10px">A decision guide for TLs and Ops when the floor goes off plan. Three triggers, clear sequence on each.</div>
+              <div style="padding-top:8px;border-top:0.5px solid var(--border)">
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px">Triggers</div>
+                <div style="font-size:11px;color:var(--ink);line-height:1.45">Stats slipping · queue rising · shift handover.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+          <!-- THE EXPANDED EXECUTION PLAYBOOK -->
+          <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+          <div style="margin-top:14px;background:#f0f9ff;border:0.5px solid #0891b2;border-radius:10px;padding:16px 18px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0891b2;background:#fff;padding:3px 8px;border-radius:4px;border:0.5px solid #0891b2">Lever 03 · expanded</span>
+              <span style="font-size:10px;color:var(--ink3)">Decision guide for TLs and Ops</span>
+            </div>
+            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:14px">When the floor goes off plan — what good leaders do</div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+
+              <!-- Trigger 1: Stats slipping -->
+              <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:12px 14px;border-top:3px solid var(--amber)">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+                  <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--amber);background:var(--amber-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #fcd34d">Trigger 1</span>
+                </div>
+                <div style="font-size:12px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">Stats are slipping</div>
+                <div style="font-size:10px;color:var(--ink3);font-style:italic;margin-bottom:10px">Adherence · AHT · QA flags · CSAT</div>
+                <div style="font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px">Sequence</div>
+                <div style="font-size:11px;color:var(--ink2);line-height:1.5">
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">1.</strong> Identify <em>where</em> — which TL pod, which agents, which call type</div>
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">2.</strong> Match the intervention — coaching nudge, side-by-side, or pull the agent for a reset conversation</div>
+                  <div><strong style="color:var(--ink)">3.</strong> Re-check at next mid-shift — did it move?</div>
+                </div>
+              </div>
+
+              <!-- Trigger 2: Queue rising -->
+              <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:12px 14px;border-top:3px solid var(--red)">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+                  <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--red);background:var(--red-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #f0a0a0">Trigger 2</span>
+                </div>
+                <div style="font-size:12px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">Queue volume is rising</div>
+                <div style="font-size:10px;color:var(--ink3);font-style:italic;margin-bottom:10px">Calls stacking · SLA at risk</div>
+                <div style="font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px">Sequence</div>
+                <div style="font-size:11px;color:var(--ink2);line-height:1.5">
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">1.</strong> Check how far above forecast · still on SLA?</div>
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">2.</strong> Pull anyone in aux/training back to queue first</div>
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">3.</strong> If still climbing, notify WFM / GH for capacity support</div>
+                  <div><strong style="color:var(--ink)">4.</strong> Brief the floor — keep AHT tight, no extended wraps</div>
+                </div>
+              </div>
+
+              <!-- Trigger 3: Shift handover -->
+              <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:12px 14px;border-top:3px solid #0891b2">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">
+                  <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0891b2;background:#e0f2fe;padding:2px 7px;border-radius:4px;border:0.5px solid #0891b2">Trigger 3</span>
+                </div>
+                <div style="font-size:12px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">Shift handover</div>
+                <div style="font-size:10px;color:var(--ink3);font-style:italic;margin-bottom:10px">Morning team → afternoon team</div>
+                <div style="font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px">What gets handed over</div>
+                <div style="font-size:11px;color:var(--ink2);line-height:1.5">
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">1.</strong> Stat snapshot — where the day stands vs target</div>
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">2.</strong> Risk-set — agents trending red, escalations live, anyone needing follow-up</div>
+                  <div style="margin-bottom:4px"><strong style="color:var(--ink)">3.</strong> Mid-flight items — open coachings, in-progress callbacks</div>
+                  <div><strong style="color:var(--ink)">4.</strong> Where to pull weight in the back half</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
+
+          <!-- WHY IT MATTERS - specifically tied to MO gaps -->
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0891b2;margin-bottom:10px">Why it matters for MO specifically</div>
+          <div style="background:var(--amber-bg);border:0.5px solid #fcd34d;border-radius:8px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center">
+            <div>
+              <div style="font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--amber);margin-bottom:6px">Adherence gap</div>
+              <div style="font-size:32px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em;line-height:1">93.3%</div>
+              <div style="font-size:10px;color:var(--ink3);margin-top:2px">vs 94% GH target</div>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--ink);line-height:1.5;margin-bottom:6px">MO runs 93.3% productive adherence — below the 94% GH target and trailing other sites. Weekly coaching can't fix it; daily intervention can.</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;font-style:italic">Lever: mid-shift check-in catches drift before it costs the queue. TLs course-correct anyone trending red and brief the afternoon shift on at-risk agents. Target: close the gap by week 4.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PILLAR 2: COACHING -->
+        <div class="pillar pillar-coaching">
+          <div class="pillar-num" style="color:#2563eb">02 — Coaching effectiveness</div>
+          <div class="pillar-title" style="color:var(--ink)">Two streams, one standard</div>
+          <div class="pillar-sub">Coaching is the cornerstone. Right now it's almost entirely reactive — GH-triggered, often weeks late. We're moving to two parallel streams: a proactive weekly cadence driven by QA, and a severity-graded reactive stream for escalations as they come in.</div>
+
+          <!-- TODAY vs FUTURE -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="compare-row compare-now" style="margin-bottom:0">
+              <div class="compare-label now-label">Today</div>
+              <div class="compare-text">GH-triggered, often 2–3 weeks old. No QA in MO — only escalation-driven coaching exists. No proactive rhythm.</div>
+            </div>
+            <div class="compare-row compare-future" style="margin-bottom:0">
+              <div class="compare-label future-label">In 4–6 weeks</div>
+              <div class="compare-text">Two streams running in parallel. QA standing up in MO (already live in Lagos and SA). Every coaching captured in the scorecard. Refresher classes triggered by floor-level trends.</div>
+            </div>
+          </div>
+
+          <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
+
+          <!-- TWO STREAMS BLOCK -->
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:10px">The two coaching streams</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+
+            <!-- STREAM A: PROACTIVE -->
+            <div style="background:var(--surface);border:0.5px solid #c4b5fd;border-radius:10px;padding:14px 16px;border-left:3px solid #4338ca">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ede9fe;color:#4338ca;padding:2px 7px;border-radius:4px;border:0.5px solid #c4b5fd">Stream A · Proactive</span>
+                <span style="font-size:10px;color:var(--ink3)">Weekly · QA-driven</span>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.3">Every agent, every week — regardless of escalations</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:10px">QA pulls 4–5 calls per agent. TL reviews trend, identifies the issue type the agent is struggling with, sets an action plan, monitors movement on that specific issue over the next few days.</div>
+              <div style="padding:8px 10px;background:var(--amber-bg);border:0.5px solid #fcd34d;border-radius:6px">
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--amber);margin-bottom:3px">Cross-site status</div>
+                <div style="font-size:11px;color:var(--ink);line-height:1.4"><strong>Lagos &amp; SA:</strong> live · <strong>MO:</strong> about to stand up QA function</div>
+              </div>
+            </div>
+
+            <!-- STREAM B: REACTIVE -->
+            <div style="background:var(--surface);border:0.5px solid #fcd34d;border-radius:10px;padding:14px 16px;border-left:3px solid #c2410c">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:2px 7px;border-radius:4px;border:0.5px solid #fdba74">Stream B · Reactive</span>
+                <span style="font-size:10px;color:var(--ink3)">Escalation-driven · severity-graded</span>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.3">Continues regardless — but with structure</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:10px">GH escalations keep coming. We grade by severity and match the response to the impact.</div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fef9c3;border:0.5px solid #facc15;border-radius:5px">
+                  <span style="font-size:9px;font-weight:700;color:var(--amber);min-width:46px">Minor</span>
+                  <span style="font-size:11px;color:var(--ink);flex:1">Written feedback · agent acknowledges in scorecard</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#ffe4d6;border:0.5px solid #fdba74;border-radius:5px">
+                  <span style="font-size:9px;font-weight:700;color:#c2410c;min-width:46px">Major</span>
+                  <span style="font-size:11px;color:var(--ink);flex:1">Live coaching call · recorded · signed</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--red-bg);border:0.5px solid #f0a0a0;border-radius:5px">
+                  <span style="font-size:9px;font-weight:700;color:var(--red);min-width:46px">Critical</span>
+                  <span style="font-size:11px;color:var(--ink);flex:1">Live call · senior leader present · immediate plan</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
+
           <!-- LAYER 1: ANATOMY -->
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px">Layer 1 — The Hugo model</div>
-          <div style="font-size:11px;color:var(--ink2);margin-bottom:10px">What every coaching session should look like. Four steps, in order, every time.</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px">The Hugo coaching anatomy — every session, both streams</div>
+          <div style="font-size:11px;color:var(--ink2);margin-bottom:10px">Four steps, in order, every time. The standard for what good looks like.</div>
           ${[
             {n:'01',step:'Listen',detail:'Pull 4–5 calls from the agent before the session. One call is rarely enough to spot a trend.'},
             {n:'02',step:'Analyse',detail:'Identify the pattern — is this one bad call or a consistent behaviour?'},
@@ -1416,54 +1627,29 @@ const STATIONS = [
 
           <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
 
-          <!-- LAYER 2: COACH MONITORING + AGENT SCORECARD -->
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px">Layer 2 — Coach monitoring &amp; Agent Scorecard</div>
-          <div style="font-size:11px;color:var(--ink2);margin-bottom:10px">Two views, one purpose. Monitor how coaches are delivering. See every agent's full journey before any conversation.</div>
-          ${[
-            {label:'Completion rate',now:'Email cc',future:'Volume per TL tracked weekly'},
-            {label:'Quality score',now:'No visibility',future:'Graded against rubric'},
-            {label:'Timeliness',now:'Unknown',future:'Avg days from trigger to delivery'},
-            {label:'Agent outcome',now:'Not tracked',future:'Metric movement 2 weeks post-coaching'},
-          ].map(r=>`
-          <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:0.5px solid var(--border)">
-            <div style="flex:1;font-size:11px;color:var(--ink2);font-weight:500">${r.label}</div>
-            <div style="font-size:10px;color:var(--ink3);background:var(--surface2);padding:2px 7px;border-radius:4px;white-space:nowrap">${r.now}</div>
-            <div style="font-size:10px;color:var(--green);background:var(--green-bg);padding:2px 7px;border-radius:4px;white-space:nowrap;border:0.5px solid #86efac">${r.future}</div>
-          </div>`).join('')}
+          <!-- LAYER 2: REFRESHER CLASSES -->
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px">Trend-based refresher classes — when coaching becomes training</div>
+          <div style="font-size:11px;color:var(--ink2);margin-bottom:12px">When a coaching theme shows up across the floor — not just one agent — it's not an individual problem any more. The training team runs biweekly or monthly refresher classes driven by two inputs.</div>
 
-          <!-- Agent Scorecard mini-preview -->
-          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:12px 14px;margin-top:12px">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-              <div style="font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#4338ca">Agent Scorecard · career view</div>
-              <span style="font-size:9px;color:var(--ink2);font-style:italic">example</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px">
+            <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:12px 14px">
+              <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563eb;margin-bottom:6px">Input 1 · Trending themes</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5">Top coaching categories from the last 4 weeks. <em>Today: failed CPhT/RPH transfers (48%) is the obvious refresher candidate.</em></div>
             </div>
-            <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px">Brian Hayes</div>
-            <div style="font-size:10px;color:var(--ink2);margin-bottom:10px">Tenure 127 days · TL Sean Lockmon · Hugo PCR 1 (Lilly)</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
-              <div style="padding:6px 8px;background:var(--surface);border-radius:5px">
-                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em">5-wk adherence</div>
-                <div style="font-size:13px;font-family:var(--mono);color:var(--green);font-weight:600">96.1% ↑</div>
-              </div>
-              <div style="padding:6px 8px;background:var(--surface);border-radius:5px">
-                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em">AHT</div>
-                <div style="font-size:13px;font-family:var(--mono);color:var(--ink2);font-weight:600">7m 59s</div>
-              </div>
-              <div style="padding:6px 8px;background:var(--surface);border-radius:5px">
-                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em">Coachings (90d)</div>
-                <div style="font-size:13px;font-family:var(--mono);color:var(--amber);font-weight:600">3 · cleared</div>
-              </div>
-              <div style="padding:6px 8px;background:var(--surface);border-radius:5px">
-                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em">Current status</div>
-                <div style="font-size:13px;font-family:var(--mono);color:var(--green);font-weight:600">On track</div>
-              </div>
+            <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:12px 14px">
+              <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#2563eb;margin-bottom:6px">Input 2 · Knowledge tests</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5">Short quizzes on concepts and processes. Surface what the team has retained and where the gap is real.</div>
             </div>
-            <div style="font-size:10px;color:var(--ink2);border-top:0.5px solid var(--border);padding-top:8px;line-height:1.5">Team leads pull this during every 1:1. Shows the <strong style="color:var(--ink2)">whole journey</strong>, not just the last call. "It tells a story about an agent's time with us."</div>
+            <div style="background:#ede9fe;border:0.5px solid #c4b5fd;border-radius:8px;padding:12px 14px">
+              <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#4338ca;margin-bottom:6px">Output · Refresher class</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5"><strong>Biweekly or monthly</strong>. Owned by training team. Topic chosen from the two inputs above. All affected agents attend.</div>
+            </div>
           </div>
 
           <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
 
           <!-- LAYER 3: COACH GRADING -->
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px">Layer 3 — Coaching quality scorecard</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#2563eb;margin-bottom:8px">Coaching the coach — quality scorecard for TLs</div>
           <div style="font-size:11px;color:var(--ink2);margin-bottom:10px">The same rigour we apply to agents, we apply to how team leads coach. A rubric makes the standard objective, not personal.</div>
           ${[
             {criteria:'Called up agent\'s 5-week data before session',w:'20%',score:null},
@@ -1483,71 +1669,309 @@ const STATIONS = [
           </div>
         </div>
 
-        <!-- PILLAR 2: RIGOR + PERFORMANCE MGMT FRAMEWORK + OUTLIER -->
+        <!-- THE BRIDGE: AGENT SCORECARD -->
+        <div style="background:linear-gradient(135deg,#fef9c3 0%,#fde68a 100%);border:1.5px solid #f59e0b;border-radius:12px;padding:24px;position:relative;overflow:hidden">
+
+          <!-- Bridge label -->
+          <div style="position:absolute;top:0;left:24px;background:#f59e0b;color:#fff;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:0 0 6px 6px">The connecting artefact</div>
+
+          <div style="margin-top:14px">
+            <div class="pillar-num" style="color:#92400e">📋 — Agent Scorecard</div>
+            <div class="pillar-title" style="color:var(--ink)">Where every input lands · what every conversation reads from</div>
+            <div class="pillar-sub">A rolling weekly view of every agent. Stats. Escalation occurrences. QA scores. Strengths and growth. PIP/warning status. The TL pulls it before any 1:1; the agent sees it in real time. Coaching feeds it; PM reads from it.</div>
+          </div>
+
+          <!-- TODAY vs FUTURE -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+            <div class="compare-row compare-now" style="margin-bottom:0">
+              <div class="compare-label now-label">Today</div>
+              <div class="compare-text">No agent-level scorecard exists.</div>
+            </div>
+            <div class="compare-row compare-future" style="margin-bottom:0">
+              <div class="compare-label future-label">In 4–6 weeks</div>
+              <div class="compare-text">One scorecard format across all three sites. Rolling time period — pull any week or month and see the trajectory. The bridge between coaching and PM.</div>
+            </div>
+          </div>
+
+          <div style="height:0.5px;background:#f59e0b;opacity:0.3;margin:18px 0"></div>
+
+          <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+          <!-- THE SCORECARD MOCKUP -->
+          <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#92400e;margin-bottom:10px">Example · Brian Hayes · week of Apr 18</div>
+
+          <div style="background:#fff;border:0.5px solid var(--border);border-radius:10px;padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,0.04)">
+
+            <!-- Header strip -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:14px">
+              <div>
+                <div style="font-size:18px;font-weight:600;color:var(--ink);margin-bottom:2px">Brian Hayes</div>
+                <div style="font-size:11px;color:var(--ink3)">TL: Sean Lockmon · Tenure: 127 days · Hugo PCR 1 (Lilly)</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+                <span style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:var(--green-bg);color:var(--green);padding:5px 12px;border-radius:6px;border:0.5px solid #86efac">● On track</span>
+                <span style="font-size:9px;color:var(--ink3);font-style:italic">No active warnings · clean rolloff</span>
+              </div>
+            </div>
+
+            <!-- STATS BLOCK -->
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px">Stats — current · last week · MTD trend</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:18px">
+              <div style="padding:10px 12px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border)">
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">QA Score</div>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <div style="font-size:18px;font-family:var(--mono);color:var(--green);font-weight:600">87%</div>
+                  <div style="font-size:10px;color:var(--green);font-weight:600">↑ +3</div>
+                </div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:2px">vs 84% last wk · MTD ↑</div>
+              </div>
+              <div style="padding:10px 12px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border)">
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">CSAT</div>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <div style="font-size:18px;font-family:var(--mono);color:var(--ink2);font-weight:600">—</div>
+                </div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:2px;font-style:italic">Not tracked at MO yet</div>
+              </div>
+              <div style="padding:10px 12px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border)">
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Adherence</div>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <div style="font-size:18px;font-family:var(--mono);color:var(--green);font-weight:600">96.1%</div>
+                  <div style="font-size:10px;color:var(--green);font-weight:600">↑ +1.2</div>
+                </div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:2px">vs 94.9% last wk · MTD ↑</div>
+              </div>
+              <div style="padding:10px 12px;background:var(--surface2);border-radius:6px;border:0.5px solid var(--border)">
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Attendance</div>
+                <div style="display:flex;align-items:baseline;gap:4px">
+                  <div style="font-size:18px;font-family:var(--mono);color:var(--ink);font-weight:600">100%</div>
+                  <div style="font-size:10px;color:var(--ink3);font-weight:600">→</div>
+                </div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:2px">No callouts · MTD →</div>
+              </div>
+            </div>
+
+            <!-- ESCALATION OCCURRENCES -->
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px">Escalation occurrences · by category</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:18px">
+              <div style="padding:10px 12px;background:#fef9c3;border:0.5px solid #facc15;border-radius:6px">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--amber)">Job / Technical</span>
+                  <span style="font-size:14px;font-family:var(--mono);font-weight:700;color:var(--ink)">2</span>
+                </div>
+                <div style="font-size:10px;color:var(--ink2);line-height:1.4">Last: TLAC misuse · Apr 11 (verbal). Prior: failed RPH · Mar 4 (verbal · cleared in 90d).</div>
+              </div>
+              <div style="padding:10px 12px;background:var(--surface2);border:0.5px solid var(--border);border-radius:6px">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink2)">Behavioural</span>
+                  <span style="font-size:14px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</span>
+                </div>
+                <div style="font-size:10px;color:var(--ink3);line-height:1.4;font-style:italic">Clean · no occurrences this tenure</div>
+              </div>
+              <div style="padding:10px 12px;background:var(--surface2);border:0.5px solid var(--border);border-radius:6px">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink2)">Compliance</span>
+                  <span style="font-size:14px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</span>
+                </div>
+                <div style="font-size:10px;color:var(--ink3);line-height:1.4;font-style:italic">Clean · no occurrences this tenure</div>
+              </div>
+            </div>
+
+            <!-- STRENGTHS & GROWTH -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px">
+              <div>
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Strengths</div>
+                <div style="font-size:11px;color:var(--ink2);line-height:1.6">
+                  <div style="display:flex;gap:6px;margin-bottom:5px"><span style="color:var(--green)">✓</span><span>Patient verification consistently strong — uses HIPAA scripts cleanly even on rushed calls</span></div>
+                  <div style="display:flex;gap:6px"><span style="color:var(--green)">✓</span><span>Tone calibrated to patient mood — flagged twice in QA as a model example</span></div>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">Growth opportunities</div>
+                <div style="font-size:11px;color:var(--ink2);line-height:1.6">
+                  <div style="display:flex;gap:6px;margin-bottom:5px"><span style="color:var(--amber)">→</span><span>TLAC referral logic — second incident this quarter; refresher class scheduled May 3</span></div>
+                  <div style="display:flex;gap:6px"><span style="color:var(--amber)">→</span><span>Documentation completeness on transferred tickets — reviewed in last coaching</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FOOTER: COACHING TRAIL -->
+            <div style="padding-top:14px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+              <div>
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px">Last coaching</div>
+                <div style="font-size:11px;color:var(--ink);font-weight:500">Apr 14 · Sean L</div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:1px">Topic: TLAC logic</div>
+              </div>
+              <div>
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px">Next scheduled</div>
+                <div style="font-size:11px;color:var(--ink);font-weight:500">Apr 28 · weekly</div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:1px">Stream A · proactive</div>
+              </div>
+              <div>
+                <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px">PM status</div>
+                <div style="font-size:11px;color:var(--green);font-weight:600">No active flags</div>
+                <div style="font-size:9px;color:var(--ink3);margin-top:1px">Stats track green</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- INFRASTRUCTURE NOTE -->
+          <div style="margin-top:14px;padding:12px 14px;background:#fff;border:0.5px solid #f59e0b;border-radius:8px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#92400e;margin-bottom:6px">Infrastructure to build</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5"><strong style="color:var(--ink)">QA system in MO</strong> — already live in Lagos and SA. Standing up the QA function is the unlock for proactive coaching here.</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5"><strong style="color:var(--ink)">Single warehouse</strong> — every QA score, escalation call-out, coaching record, and stat snapshot lives in one place. The agent's progress over time becomes searchable.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PILLAR 3: PERFORMANCE MANAGEMENT FRAMEWORK -->
         <div class="pillar pillar-rigor">
-          <div class="pillar-num" style="color:#a21caf">02 — Operational rigor</div>
-          <div class="pillar-title" style="color:var(--ink)">Performance Management Framework</div>
-          <div class="pillar-sub">Co-designed with GH leadership. Three categories, tiered by impact, with a clear escalation path. Same answer every time — no surprise escalations, and grace for separate low-impact issues.</div>
+          <div class="pillar-num" style="color:#a21caf">03 — Performance management</div>
+          <div class="pillar-title" style="color:var(--ink)">Two ladders, one input source</div>
+          <div class="pillar-sub">Two distinct flows that both read from the agent scorecard. The <strong>escalation ladder</strong> handles incidents as they come in — reactive, severity-graded. The <strong>PM ladder</strong> is our own monitoring of agent outcomes against KPIs — proactive, stats-driven. The scorecard is what makes them work together.</div>
 
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
             <div class="compare-row compare-now" style="margin-bottom:0">
               <div class="compare-label now-label">Today</div>
-              <div class="compare-text">Escalation path applied case by case. Every coaching triggered ad-hoc. Agents uncertain about consequences. No rolloff policy. Senior leadership intervenes when severity warrants.</div>
+              <div class="compare-text">Escalation path applied case by case. No proactive PM flow exists in MO — without QA scores or weekly stats discipline, there's nothing systematic flagging agents who are missing the bar. Senior leadership intervenes when severity warrants.</div>
             </div>
             <div class="compare-row compare-future" style="margin-bottom:0">
-              <div class="compare-label future-label">In 6–8 weeks</div>
-              <div class="compare-text">Framework published, all 11 TLs trained. Agents know the path. Rolloff rules defined. Separate issues treated separately. Behavioural issues persist for duration of employment.</div>
+              <div class="compare-label future-label">In 4–6 weeks</div>
+              <div class="compare-text">Both ladders running. Escalation handled per category with rolloff rules clear. PM ladder reads weekly from the scorecard — two consecutive flags trigger Coaching → Excellence Drive → PIP → exit. Same answer every time.</div>
             </div>
           </div>
 
-          <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
+          <div style="height:0.5px;background:var(--border);margin:18px 0"></div>
 
-          <!-- PERFORMANCE MANAGEMENT MATRIX -->
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#a21caf;margin-bottom:8px">Issue categories · what triggers what</div>
+          <!-- TWO LADDERS SIDE BY SIDE -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
 
-          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-              <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ede9fe;color:#4338ca;padding:2px 6px;border-radius:4px;border:0.5px solid #c4b5fd">Job / Technical</span>
-              <span style="font-size:10px;color:var(--ink2)">Low–medium impact · 90-day rolloff</span>
+            <!-- ━━━━━━━━━━━━━━━━━━━━━━━ -->
+            <!-- LADDER A: ESCALATION -->
+            <!-- ━━━━━━━━━━━━━━━━━━━━━━━ -->
+            <div style="background:var(--surface);border:0.5px solid #f0a0a0;border-radius:10px;padding:14px 16px;border-top:3px solid var(--red)">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--red-bg);color:var(--red);padding:3px 8px;border-radius:4px;border:0.5px solid #f0a0a0">Ladder A · Escalation</span>
+                <span style="font-size:10px;color:var(--ink3)">Reactive · GH-driven</span>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">When something specific goes wrong</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:14px">Triggered by an incident — usually flagged by GH. Severity-graded. Resolution captured on the scorecard.</div>
+
+              <!-- 3 categories -->
+              <div style="background:#fafafa;border-radius:6px;padding:10px;margin-bottom:8px">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px">
+                  <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ede9fe;color:#4338ca;padding:2px 6px;border-radius:3px;border:0.5px solid #c4b5fd">Job / Technical</span>
+                  <span style="font-size:9px;color:var(--ink3);font-style:italic">90-day rolloff</span>
+                </div>
+                <div style="font-size:10px;color:var(--ink2);line-height:1.4;margin-bottom:6px">Failed RPH/CPhT transfers · TLAC misuse · documentation · adherence</div>
+                <div style="display:flex;gap:3px;flex-wrap:wrap;align-items:center">
+                  <span style="font-size:9px;color:var(--green);background:var(--green-bg);padding:2px 5px;border-radius:3px">Verbal</span>
+                  <span style="font-size:9px;color:var(--ink3)">→</span>
+                  <span style="font-size:9px;color:var(--amber);background:var(--amber-bg);padding:2px 5px;border-radius:3px">Written</span>
+                  <span style="font-size:9px;color:var(--ink3)">→</span>
+                  <span style="font-size:9px;color:#c2410c;background:#ffe4d6;padding:2px 5px;border-radius:3px">Final</span>
+                  <span style="font-size:9px;color:var(--ink3)">→</span>
+                  <span style="font-size:9px;color:var(--red);background:var(--red-bg);padding:2px 5px;border-radius:3px">Term</span>
+                </div>
+              </div>
+
+              <div style="background:#fafafa;border-radius:6px;padding:10px;margin-bottom:8px">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px">
+                  <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ede9fe;color:#4338ca;padding:2px 6px;border-radius:3px;border:0.5px solid #c4b5fd">Behavioural</span>
+                  <span style="font-size:9px;color:var(--red);font-style:italic">Stays on record</span>
+                </div>
+                <div style="font-size:10px;color:var(--ink2);line-height:1.4;margin-bottom:6px">Attendance · tardiness · call avoidance · conduct · tone</div>
+                <div style="display:flex;gap:3px;flex-wrap:wrap;align-items:center">
+                  <span style="font-size:9px;color:var(--green);background:var(--green-bg);padding:2px 5px;border-radius:3px">Verbal</span>
+                  <span style="font-size:9px;color:var(--ink3)">→</span>
+                  <span style="font-size:9px;color:#c2410c;background:#ffe4d6;padding:2px 5px;border-radius:3px">Final</span>
+                  <span style="font-size:9px;color:var(--ink3);font-style:italic">(skip written)</span>
+                </div>
+              </div>
+
+              <div style="background:#fafafa;border-radius:6px;padding:10px">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px">
+                  <span style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--red-bg);color:var(--red);padding:2px 6px;border-radius:3px;border:0.5px solid #f0a0a0">Compliance</span>
+                  <span style="font-size:9px;color:var(--red);font-style:italic">No rolloff</span>
+                </div>
+                <div style="font-size:10px;color:var(--ink2);line-height:1.4;margin-bottom:6px">HIPAA · patient verification · OSI · PHI handling</div>
+                <div style="display:flex;gap:3px;flex-wrap:wrap;align-items:center">
+                  <span style="font-size:9px;color:var(--red);background:var(--red-bg);padding:2px 5px;border-radius:3px">Final</span>
+                  <span style="font-size:9px;color:var(--ink3)">or</span>
+                  <span style="font-size:9px;color:var(--red);background:var(--red-bg);padding:2px 5px;border-radius:3px">Immediate term</span>
+                </div>
+              </div>
+
+              <!-- SKIP NOTE: when escalation bypasses PM entirely -->
+              <div style="margin-top:10px;padding:10px 12px;background:var(--red-bg);border:0.5px dashed var(--red);border-radius:6px">
+                <div style="display:flex;align-items:flex-start;gap:8px">
+                  <span style="font-size:14px;line-height:1;color:var(--red)">⚡</span>
+                  <div style="font-size:10px;color:var(--ink2);line-height:1.5"><strong style="color:var(--red)">Some escalations skip the PM ladder entirely.</strong> Critical compliance issues (HIPAA, PHI handling) and serious behavioural breaches can move directly to immediate termination — no coaching, no Excellence Drive, no PIP. The escalation ladder takes precedence when severity warrants it.</div>
+                </div>
+              </div>
             </div>
-            <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:8px">Failed RPH / CPhT transfers, TLAC misuse, documentation gaps, productive adherence, declining calls</div>
-            <div style="display:flex;gap:4px;flex-wrap:wrap">
-              <span style="font-size:9px;color:var(--green);background:var(--green-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #86efac">Verbal</span>
-              <span style="font-size:10px;color:var(--ink3)">→</span>
-              <span style="font-size:9px;color:var(--amber);background:var(--amber-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #fcd34d">Written</span>
-              <span style="font-size:10px;color:var(--ink3)">→</span>
-              <span style="font-size:9px;color:#c2410c;background:#ffe4d6;padding:2px 7px;border-radius:4px;border:0.5px solid #fdba74">Final</span>
-              <span style="font-size:10px;color:var(--ink3)">→</span>
-              <span style="font-size:9px;color:var(--red);background:var(--red-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #f0a0a0">Term</span>
+
+            <!-- ━━━━━━━━━━━━━━━━━━━━━━━ -->
+            <!-- LADDER B: PM (STATS) -->
+            <!-- ━━━━━━━━━━━━━━━━━━━━━━━ -->
+            <div style="background:var(--surface);border:0.5px solid #c4b5fd;border-radius:10px;padding:14px 16px;border-top:3px solid #7c3aed">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ede9fe;color:#4338ca;padding:3px 8px;border-radius:4px;border:0.5px solid #c4b5fd">Ladder B · PM (stats-driven)</span>
+                <span style="font-size:10px;color:var(--ink3)">Proactive · weekly</span>
+              </div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3">When stats show a pattern</div>
+              <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:14px">Reads weekly from the scorecard. Doesn't wait for an incident — flags persistent underperformance and moves through a defined progression.</div>
+
+              <!-- 4 stages -->
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fafafa;border-radius:6px;border-left:3px solid var(--amber)">
+                  <div style="width:22px;height:22px;border-radius:50%;background:var(--amber);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
+                  <div style="flex:1">
+                    <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px">Coaching</div>
+                    <div style="font-size:10px;color:var(--ink2);line-height:1.4">Flagged 2× in a row for missing stats → moved into focused coaching</div>
+                  </div>
+                </div>
+
+                <div style="text-align:center;font-size:10px;color:var(--ink3)">↓ <em>still missing after coaching</em></div>
+
+                <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fafafa;border-radius:6px;border-left:3px solid #c2410c">
+                  <div style="width:22px;height:22px;border-radius:50%;background:#c2410c;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+                  <div style="flex:1">
+                    <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px">Excellence Drive</div>
+                    <div style="font-size:10px;color:var(--ink2);line-height:1.4">Flagged 2× more after coaching → structured improvement effort</div>
+                  </div>
+                </div>
+
+                <div style="text-align:center;font-size:10px;color:var(--ink3)">↓ <em>still missing after Excellence Drive</em></div>
+
+                <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fafafa;border-radius:6px;border-left:3px solid #7c3aed">
+                  <div style="width:22px;height:22px;border-radius:50%;background:#7c3aed;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+                  <div style="flex:1">
+                    <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px">PIP · 3 weeks (6 if extended)</div>
+                    <div style="font-size:10px;color:var(--ink2);line-height:1.4">Two consecutive weeks meeting bar = pass. Otherwise extends or exits.</div>
+                  </div>
+                </div>
+
+                <div style="text-align:center;font-size:10px;color:var(--ink3)">↓ <em>fail PIP</em></div>
+
+                <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:var(--red-bg);border-radius:6px;border-left:3px solid var(--red)">
+                  <div style="width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div>
+                  <div style="flex:1">
+                    <div style="font-size:11px;font-weight:600;color:var(--ink);margin-bottom:2px">Exit</div>
+                    <div style="font-size:10px;color:var(--ink2);line-height:1.4">Performance-managed out · agent has had four chances by this point</div>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
 
-          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-              <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ede9fe;color:#4338ca;padding:2px 6px;border-radius:4px;border:0.5px solid #c4b5fd">Behavioural</span>
-              <span style="font-size:10px;color:var(--red)">No rolloff · lasts duration of employment</span>
-            </div>
-            <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:8px">Attendance, tardiness, call avoidance (intentional), conduct, tone on calls</div>
-            <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
-              <span style="font-size:9px;color:var(--green);background:var(--green-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #86efac">Verbal</span>
-              <span style="font-size:10px;color:var(--ink3)">→</span>
-              <span style="font-size:9px;color:#c2410c;background:#ffe4d6;padding:2px 7px;border-radius:4px;border:0.5px solid #fdba74">Final</span>
-              <span style="font-size:10px;color:var(--ink3);font-style:italic">(can skip written)</span>
-            </div>
-          </div>
-
-          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:12px">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-              <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--red-bg);color:var(--red);padding:2px 6px;border-radius:4px;border:0.5px solid #f0a0a0">Compliance</span>
-              <span style="font-size:10px;color:var(--red)">High impact · no rolloff</span>
-            </div>
-            <div style="font-size:11px;color:var(--ink2);line-height:1.5;margin-bottom:8px">HIPPA violations, patient verification failures, OSI non-reporting, protected health data handling</div>
-            <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
-              <span style="font-size:9px;color:var(--red);background:var(--red-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #f0a0a0">Final</span>
-              <span style="font-size:10px;color:var(--ink3)">or</span>
-              <span style="font-size:9px;color:var(--red);background:var(--red-bg);padding:2px 7px;border-radius:4px;border:0.5px solid #f0a0a0">Immediate term</span>
-              <span style="font-size:10px;color:var(--ink3);font-style:italic">(case by case)</span>
-            </div>
+          <!-- BRIDGE NOTE -->
+          <div style="padding:12px 14px;background:#fef9c3;border:0.5px solid #f59e0b;border-radius:8px;margin-bottom:16px;display:flex;gap:10px;align-items:flex-start">
+            <div style="font-size:14px;line-height:1">📋</div>
+            <div style="font-size:11px;color:var(--ink2);line-height:1.5"><strong style="color:var(--ink)">The scorecard is what connects them.</strong> Every escalation lands on the scorecard as a call-out. Every weekly stat lands on the scorecard as a number. The scorecard tracks both flows in one view — so a TL doing a weekly 1:1 sees the full picture, not two disconnected processes.</div>
           </div>
 
           <div style="height:0.5px;background:var(--border);margin:14px 0"></div>
@@ -1558,28 +1982,28 @@ const STATIONS = [
             <span class="outlier-tag tag-risk">At risk</span>
             <div>
               <div class="outlier-name">Jordan Gibson</div>
-              <div class="outlier-detail">Job/Technical · 4th occurrence transfers · Final warning · next step = Term</div>
+              <div class="outlier-detail">Escalation ladder · Job/Technical · 4th occurrence transfers · Final warning · next step = Term</div>
             </div>
           </div>
           <div class="outlier-row">
             <span class="outlier-tag tag-watch">Watch</span>
             <div>
               <div class="outlier-name">Sabrina Krenek</div>
-              <div class="outlier-detail">Job/Technical · 3rd occurrence · Written warning · 90-day clock running</div>
+              <div class="outlier-detail">PM ladder · stats flagged 3 weeks running · entering Excellence Drive next Monday</div>
             </div>
           </div>
           <div class="outlier-row">
             <span class="outlier-tag tag-manage">On track</span>
             <div>
               <div class="outlier-name">Brian Hayes</div>
-              <div class="outlier-detail">Cleared 1st occurrence &gt;90 days ago · Resets clean under rolloff rule</div>
+              <div class="outlier-detail">Escalation: 1st occurrence cleared &gt;90 days · PM: stats green · scorecard clean</div>
             </div>
           </div>
         </div>
 
-        <!-- PILLAR 3: AGENT VOICE -->
+        <!-- PILLAR 4: AGENT VOICE -->
         <div class="pillar pillar-ideation">
-          <div class="pillar-num" style="color:#c2410c">03 — Agent Voice</div>
+          <div class="pillar-num" style="color:#c2410c">04 — Agent Voice</div>
           <div class="pillar-title" style="color:var(--ink)">The feedback loop</div>
           <div class="pillar-sub">A management system only works if it stays connected to what agents actually experience. This is how we stay honest — themed, focused listening that feeds directly into how we coach and what we set as the standard.</div>
 
@@ -1589,7 +2013,7 @@ const STATIONS = [
               <div class="compare-text">Public service announcements for obvious trends. Open feedback when it surfaces naturally. No structured mechanism to capture the signal from the floor.</div>
             </div>
             <div class="compare-row compare-future" style="margin-bottom:0">
-              <div class="compare-label future-label">In 6–8 weeks</div>
+              <div class="compare-label future-label">In 4–6 weeks</div>
               <div class="compare-text">Weekly themed question every Monday. Team leads capture responses. Ops manager synthesises Friday. Top findings feed into next week's coaching focus and — when needed — into the PM framework itself. Agents see their input shape what happens next.</div>
             </div>
           </div>
