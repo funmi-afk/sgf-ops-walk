@@ -308,10 +308,6 @@ const STATIONS = [
           <!-- Daily bars -->
           <div style="display:flex;gap:6px;align-items:flex-end;height:120px;padding:14px 4px 0;flex:1">
             <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end">
-              <div style="font-size:10px;font-family:var(--mono);font-weight:600;color:var(--amber)">92.6%</div>
-              <div style="width:65%;height:60px;background:#ef9f27;border-radius:3px 3px 0 0"></div>
-            </div>
-            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end">
               <div style="font-size:10px;font-family:var(--mono);font-weight:600;color:var(--amber)">92.9%</div>
               <div style="width:65%;height:63px;background:#ef9f27;border-radius:3px 3px 0 0"></div>
             </div>
@@ -335,33 +331,37 @@ const STATIONS = [
               <div style="font-size:10px;font-family:var(--mono);font-weight:600;color:var(--red)">91.6%</div>
               <div style="width:65%;height:52px;background:#e24b4a;border-radius:3px 3px 0 0"></div>
             </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end">
+              <div style="font-size:10px;font-family:var(--mono);font-weight:600;color:var(--green)">94.2%</div>
+              <div style="width:65%;height:73px;background:#1a7a4a;border-radius:3px 3px 0 0"></div>
+            </div>
           </div>
 
           <!-- Day labels -->
           <div style="border-top:0.5px solid var(--border);margin:0 4px"></div>
           <div style="display:flex;gap:6px;padding:6px 4px 0;margin-bottom:10px">
-            <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Sat<br><span style="font-size:9px">18 Apr</span></div>
             <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Mon<br><span style="font-size:9px">20 Apr</span></div>
             <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Tue<br><span style="font-size:9px">21 Apr</span></div>
             <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Wed<br><span style="font-size:9px">22 Apr</span></div>
             <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Thu<br><span style="font-size:9px">23 Apr</span></div>
             <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Fri<br><span style="font-size:9px">24 Apr</span></div>
             <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Sat<br><span style="font-size:9px">25 Apr</span></div>
+            <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">Mon<br><span style="font-size:9px">27 Apr</span></div>
           </div>
 
           <!-- Quick stats strip -->
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:10px;border-top:0.5px solid var(--border)">
             <div style="text-align:center">
               <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;font-weight:600">7-day avg</div>
-              <div style="font-size:16px;font-family:var(--mono);font-weight:300;color:var(--ink)">93.1%</div>
+              <div style="font-size:16px;font-family:var(--mono);font-weight:300;color:var(--ink)">93.4%</div>
             </div>
             <div style="text-align:center">
               <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;font-weight:600">Days at/above target</div>
-              <div style="font-size:16px;font-family:var(--mono);font-weight:300;color:var(--red)">1 / 7</div>
+              <div style="font-size:16px;font-family:var(--mono);font-weight:300;color:var(--amber)">2 / 7</div>
             </div>
             <div style="text-align:center">
               <div style="font-size:9px;color:var(--ink3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;font-weight:600">Streak</div>
-              <div style="font-size:16px;font-family:var(--mono);font-weight:300;color:var(--ink)">0 days</div>
+              <div style="font-size:16px;font-family:var(--mono);font-weight:300;color:var(--ink)">1 day</div>
             </div>
           </div>
         </div>
@@ -376,6 +376,7 @@ const STATIONS = [
             <div style="display:flex;align-items:center;gap:5px"><div style="width:9px;height:9px;border-radius:2px;background:#1a7a4a"></div><span style="font-size:10px;color:var(--ink3)">Decreased WoW</span></div>
             <div style="display:flex;align-items:center;gap:5px"><div style="width:9px;height:9px;border-radius:2px;background:#ef9f27"></div><span style="font-size:10px;color:var(--ink3)">Flat WoW</span></div>
             <div style="display:flex;align-items:center;gap:5px"><div style="width:9px;height:9px;border-radius:2px;background:#e24b4a"></div><span style="font-size:10px;color:var(--ink3)">Increased WoW</span></div>
+            <div style="display:flex;align-items:center;gap:5px"><div style="width:9px;height:9px;border-radius:2px;background:repeating-linear-gradient(45deg,#9aa0b0,#9aa0b0 2px,#c8ccd6 2px,#c8ccd6 4px);border:0.5px solid #6b7280"></div><span style="font-size:10px;color:var(--ink3);font-style:italic">Partial week</span></div>
           </div>
         </div>
 
@@ -391,6 +392,7 @@ const STATIONS = [
               <div style="flex:1;text-align:center;font-size:11px;font-family:var(--mono);font-weight:600;color:var(--ink2)">2.2%</div>
               <div style="flex:1;text-align:center;font-size:11px;font-family:var(--mono);font-weight:600;color:var(--ink2)">3.1%</div>
               <div style="flex:1;text-align:center;font-size:11px;font-family:var(--mono);font-weight:600;color:var(--ink2)">2.5%</div>
+              <div style="flex:1;text-align:center;font-size:11px;font-family:var(--mono);font-weight:600;color:var(--ink3);font-style:italic">2.1%</div>
             </div>
 
             <!-- volume labels row -->
@@ -400,6 +402,7 @@ const STATIONS = [
               <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">363 missed</div>
               <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">529 missed</div>
               <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">456 missed</div>
+              <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3);font-style:italic">86 missed</div>
             </div>
 
             <!-- bars -->
@@ -419,6 +422,9 @@ const STATIONS = [
               <div style="flex:1;display:flex;justify-content:center;align-items:flex-end;height:100%">
                 <div style="width:62%;height:111px;border-radius:4px 4px 0 0;background:#1a7a4a"></div>
               </div>
+              <div style="flex:1;display:flex;justify-content:center;align-items:flex-end;height:100%">
+                <div style="width:62%;height:21px;border-radius:4px 4px 0 0;background:repeating-linear-gradient(45deg,#9aa0b0,#9aa0b0 4px,#c8ccd6 4px,#c8ccd6 8px);border:0.5px solid #6b7280"></div>
+              </div>
             </div>
 
             <!-- baseline + date labels -->
@@ -429,7 +435,9 @@ const STATIONS = [
               <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">11 Apr</div>
               <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">18 Apr</div>
               <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3)">25 Apr</div>
+              <div style="flex:1;text-align:center;font-size:10px;color:var(--ink3);font-style:italic">2 May<br><span style="font-size:9px">(partial)</span></div>
             </div>
+            <div style="margin-top:8px;padding:0 12px;font-size:10px;color:var(--ink3);font-style:italic;line-height:1.4">2 May column reflects Mon 27 Apr only (1 of 7 days) · not included in 5-wk avg or WoW change.</div>
           </div>
 
           <!-- Stats strip - vertical 2x2 grid since column is narrow -->
@@ -477,72 +485,72 @@ const STATIONS = [
             </div>
             <div class="lb-row">
               <div class="lb-rank">2</div>
-              <div class="av" style="background:#e8effc;color:#1a5fbf">JC</div>
-              <div class="lb-name">Jami Carter</div>
+              <div class="av" style="background:#e8effc;color:#1a5fbf">BH</div>
+              <div class="lb-name">Brian Hayes</div>
               <span class="summit">★</span>
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:87.5%;background:#1a7a4a"></div></div>
-              <div class="lb-pct" style="color:#1a7a4a">14 pts</div>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:93.8%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">15 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">3</div>
-              <div class="av" style="background:#fff3e0;color:#a05a00">DG</div>
-              <div class="lb-name">Denise Gee</div>
+              <div class="av" style="background:#fff3e0;color:#a05a00">JC</div>
+              <div class="lb-name">Joseph Courtaway</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:87.5%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">14 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">4</div>
-              <div class="av" style="background:#ede9fe;color:#6d28d9">JB</div>
-              <div class="lb-name">Jeremy Bressman</div>
+              <div class="av" style="background:#ede9fe;color:#6d28d9">DG</div>
+              <div class="lb-name">Denise Gee</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:87.5%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">14 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">5</div>
-              <div class="av" style="background:#fdeaea;color:#b92d2d">BH</div>
-              <div class="lb-name">Brian Hayes</div>
+              <div class="av" style="background:#fdeaea;color:#b92d2d">JB</div>
+              <div class="lb-name">Jeremy Bressman</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:87.5%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">14 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">6</div>
-              <div class="av" style="background:#e8f5ee;color:#1a7a4a">EP</div>
-              <div class="lb-name">Elizabeth Perry</div>
+              <div class="av" style="background:#e8f5ee;color:#1a7a4a">AB</div>
+              <div class="lb-name">Adam Baxter</div>
               <span class="summit">★</span>
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:87.5%;background:#1a7a4a"></div></div>
-              <div class="lb-pct" style="color:#1a7a4a">14 pts</div>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">7</div>
-              <div class="av" style="background:#e8effc;color:#1a5fbf">JC</div>
-              <div class="lb-name">Joseph Courtaway</div>
+              <div class="av" style="background:#e8effc;color:#1a5fbf">TS</div>
+              <div class="lb-name">Tessa Spoonemore</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">8</div>
-              <div class="av" style="background:#fff3e0;color:#a05a00">ZD</div>
-              <div class="lb-name">Zazil Azuara Dorado</div>
+              <div class="av" style="background:#fff3e0;color:#a05a00">CG</div>
+              <div class="lb-name">Casey Guest</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">9</div>
-              <div class="av" style="background:#ede9fe;color:#6d28d9">AH</div>
-              <div class="lb-name">Ashley Howard</div>
+              <div class="av" style="background:#ede9fe;color:#6d28d9">AG</div>
+              <div class="lb-name">Amy Gerry</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">10</div>
-              <div class="av" style="background:#fdeaea;color:#b92d2d">JS</div>
-              <div class="lb-name">Joanna Stobbe</div>
+              <div class="av" style="background:#fdeaea;color:#b92d2d">CC</div>
+              <div class="lb-name">Collin Chipman</div>
               <span class="summit">★</span>
               <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
@@ -551,83 +559,83 @@ const STATIONS = [
           <div>
             <div class="lb-row">
               <div class="lb-rank">11</div>
-              <div class="av" style="background:#e8f5ee;color:#1a7a4a">TS</div>
-              <div class="lb-name">Tessa Spoonemore</div>
-                            
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
-              <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
+              <div class="av" style="background:#e8f5ee;color:#1a7a4a">ZD</div>
+              <div class="lb-name">Zazil Azuara Dorado</div>
+              <span class="summit">★</span>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">12</div>
-              <div class="av" style="background:#e8effc;color:#1a5fbf">AB</div>
-              <div class="lb-name">Adam Baxter</div>
-                            
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
-              <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
+              <div class="av" style="background:#e8effc;color:#1a5fbf">AH</div>
+              <div class="lb-name">Ashley Howard</div>
+              <span class="summit">★</span>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">13</div>
-              <div class="av" style="background:#fff3e0;color:#a05a00">CG</div>
-              <div class="lb-name">Casey Guest</div>
-                            
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
-              <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
+              <div class="av" style="background:#fff3e0;color:#a05a00">EP</div>
+              <div class="lb-name">Elizabeth Perry</div>
+              <span class="summit">★</span>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:81.2%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">13 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">14</div>
-              <div class="av" style="background:#ede9fe;color:#6d28d9">CC</div>
-              <div class="lb-name">Collin Chipman</div>
+              <div class="av" style="background:#ede9fe;color:#6d28d9">MH</div>
+              <div class="lb-name">Madison Hogan</div>
                             
               <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">15</div>
-              <div class="av" style="background:#fdeaea;color:#b92d2d">CB</div>
-              <div class="lb-name">Cory Butts</div>
+              <div class="av" style="background:#fdeaea;color:#b92d2d">JC</div>
+              <div class="lb-name">Jami Carter</div>
                             
               <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">16</div>
-              <div class="av" style="background:#e8f5ee;color:#1a7a4a">TC</div>
-              <div class="lb-name">Tamika Coleman</div>
+              <div class="av" style="background:#e8f5ee;color:#1a7a4a">CR</div>
+              <div class="lb-name">Christian Richardson</div>
                             
               <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">17</div>
-              <div class="av" style="background:#e8effc;color:#1a5fbf">AR</div>
-              <div class="lb-name">Akella Ragsdale</div>
+              <div class="av" style="background:#e8effc;color:#1a5fbf">CB</div>
+              <div class="lb-name">Cory Butts</div>
                             
               <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">18</div>
-              <div class="av" style="background:#fff3e0;color:#a05a00">SN</div>
-              <div class="lb-name">Sean Nowack</div>
+              <div class="av" style="background:#fff3e0;color:#a05a00">TC</div>
+              <div class="lb-name">Tamika Coleman</div>
                             
               <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
               <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">19</div>
-              <div class="av" style="background:#ede9fe;color:#6d28d9">MH</div>
-              <div class="lb-name">Madison Hogan</div>
+              <div class="av" style="background:#ede9fe;color:#6d28d9">JS</div>
+              <div class="lb-name">Joanna Stobbe</div>
                             
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:68.8%;background:#ef9f27"></div></div>
-              <div class="lb-pct" style="color:#a05a00">11 pts</div>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
             <div class="lb-row">
               <div class="lb-rank">20</div>
-              <div class="av" style="background:#fdeaea;color:#b92d2d">SB</div>
-              <div class="lb-name">Sabrina Baker</div>
+              <div class="av" style="background:#fdeaea;color:#b92d2d">AR</div>
+              <div class="lb-name">Akella Ragsdale</div>
                             
-              <div class="lb-bar-bg"><div class="lb-bar" style="width:68.8%;background:#ef9f27"></div></div>
-              <div class="lb-pct" style="color:#a05a00">11 pts</div>
+              <div class="lb-bar-bg"><div class="lb-bar" style="width:75.0%;background:#1a7a4a"></div></div>
+              <div class="lb-pct" style="color:#1a7a4a">12 pts</div>
             </div>
           </div>
         </div>
