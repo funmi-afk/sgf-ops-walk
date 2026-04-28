@@ -242,7 +242,7 @@ const STATIONS = [
   {
     future: false,
     icon: "📊",
-    eyebrow: "Station 1 of 4 · Daily rhythm",
+    eyebrow: "Station 1 of 5 · Daily rhythm",
     title: "Performance Visibility",
     shortLabel: "Performance",
     desc: "",
@@ -710,7 +710,7 @@ const STATIONS = [
   {
     future: false,
     icon: "📈",
-    eyebrow: "Station 2 of 4 · Team & individual trending",
+    eyebrow: "Station 2 of 5 · Team & individual trending",
     title: "Individual Performance — 5 Week View",
     shortLabel: "Trending",
     desc: "",
@@ -993,7 +993,7 @@ const STATIONS = [
   {
     future: false,
     icon: "💬",
-    eyebrow: "Station 3 of 4 · Coaching operations",
+    eyebrow: "Station 3 of 5 · Coaching operations",
     title: "Coaching Management",
     shortLabel: "Coaching",
     desc: "",
@@ -1319,11 +1319,355 @@ const STATIONS = [
       </div>`
   },
 
-  // ─── STATION 4: FUTURE STATE ──────────────────────────────────────────────
+  // ─── STATION 4: ATTENDANCE & TRACK RECORD ─────────────────────────────────
+  {
+    future: false,
+    icon: "📋",
+    eyebrow: "Station 4 of 5 · Attendance discipline",
+    title: "Attendance & Track Record",
+    shortLabel: "Attendance",
+    desc: "",
+    render: () => `
+      <!-- TOP ROW: Top-line metrics -->
+      <div class="inner-card">
+        <div class="ic-label">Attendance enforcement · current state</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:2px">
+
+          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Agents flagged</div>
+            <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--ink);letter-spacing:-0.03em;text-align:center">47</div>
+            <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
+              <div style="text-align:center;background:var(--amber-bg);border:0.5px solid #fcd34d;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--amber)">41% of 116 active</div>
+            </div>
+          </div>
+
+          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Currently at risk</div>
+            <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:#c2410c;letter-spacing:-0.03em;text-align:center">8</div>
+            <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
+              <div style="text-align:center;background:#ffe4d6;border:0.5px solid #fdba74;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:#c2410c">On final warning</div>
+            </div>
+          </div>
+
+          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Termed (period)</div>
+            <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--red);letter-spacing:-0.03em;text-align:center">3</div>
+            <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
+              <div style="text-align:center;background:var(--red-bg);border:0.5px solid #f0a0a0;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--red)">Process completed</div>
+            </div>
+          </div>
+
+          <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-size:10px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;text-align:center">Ladder progression</div>
+            <div style="font-size:28px;font-weight:300;font-family:var(--mono);color:var(--green);letter-spacing:-0.03em;text-align:center">15</div>
+            <div style="display:flex;flex-direction:column;gap:4px;margin-top:10px;width:100%">
+              <div style="text-align:center;background:var(--green-bg);border:0.5px solid #86efac;border-radius:5px;padding:3px 6px;font-size:10px;font-weight:600;font-family:var(--mono);color:var(--green)">32% moved through stages</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ROW 2: Action ladder distribution -->
+      <div class="inner-card">
+              <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px">Action ladder · current distribution</div>
+
+      <div style="display:flex;height:42px;border-radius:6px;overflow:hidden;border:0.5px solid var(--border);margin-bottom:8px">
+        <div style="width:34.0%;background:#1a7a4a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:600">16</div>
+        <div style="width:42.6%;background:#ef9f27;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:600">20</div>
+        <div style="width:17.0%;background:#c2410c;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:600">8</div>
+        <div style="width:6.4%;background:#b92d2d;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:600">3</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#1a7a4a"></div><span style="font-size:10px;color:var(--ink2)">Memo of counseling</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">34%</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#ef9f27"></div><span style="font-size:10px;color:var(--ink2)">Written warning</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">43%</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#c2410c"></div><span style="font-size:10px;color:var(--ink2)">Final warning</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">17%</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;border-radius:2px;background:#b92d2d"></div><span style="font-size:10px;color:var(--ink2)">Termination</span><span style="font-size:10px;color:var(--ink3);font-family:var(--mono);margin-left:auto">6%</span></div>
+      </div>
+        <div class="divider"></div>
+        <div style="font-size:11px;color:var(--ink2);line-height:1.55"><strong style="color:var(--ink)">Reading the ladder:</strong> Most flagged agents sit at written warning (43%) — the ladder is doing its job catching repeat absences before they become terminations. 8 on final warning means 8 active conversations happening this week with the agent and TL on whether they'll improve or exit. 3 terminations show the framework follows through when behaviour doesn't change.</div>
+      </div>
+
+      <!-- ROW 3: Two-column · By TL + Progression examples -->
+      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:10px">
+
+        <!-- LEFT: By TL table -->
+        <div class="inner-card" style="margin-bottom:0">
+          <div class="ic-label">Attendance flags by team lead</div>
+          <div style="font-size:11px;color:var(--ink3);margin-bottom:10px">Each agent counted once at their current ladder stage</div>
+          <table style="width:100%;border-collapse:collapse">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border)">
+                <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Team lead</th>
+                <th style="text-align:center;padding:8px 6px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Total</th>
+                <th style="text-align:center;padding:8px 6px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Memo</th>
+                <th style="text-align:center;padding:8px 6px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Written</th>
+                <th style="text-align:center;padding:8px 6px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Final</th>
+                <th style="text-align:center;padding:8px 6px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Term</th>
+                <th style="text-align:center;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Critical</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Areanna Kelley</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">8</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">6</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Steven Burns</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">8</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">3</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">3</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--red)">3</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Sean Lockmon</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">7</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">4</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--amber)">1</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Estella Cooper</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">5</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--red)">2</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Stephen Wehrheim</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--amber)">1</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Alissa Clark</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">3</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Hunter Flick</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">James Goldsmith</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Wila Young</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:500;color:var(--ink)">Christian Iles</td>
+              <td style="padding:8px 6px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--ink3)">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--amber);font-weight:600">0</td>
+              <td style="padding:8px 6px;text-align:center;font-size:11px;font-family:var(--mono);color:var(--red);font-weight:600">0</td>
+              <td style="padding:8px 12px;text-align:center;font-size:12px;font-family:var(--mono);font-weight:700;color:var(--ink3)">0</td>
+            </tr>
+            </tbody>
+          </table>
+          <div style="margin-top:10px;font-size:11px;color:var(--ink2);line-height:1.5"><strong style="color:var(--ink)">Critical = Final + Term.</strong> Steven Burns and Estella Cooper carry the highest critical concentration — pods to focus on this cycle.</div>
+        </div>
+
+        <!-- RIGHT: Progression journey examples -->
+        <div class="inner-card" style="margin-bottom:0">
+          <div class="ic-label">Ladder in motion · individual journeys</div>
+          <div style="font-size:11px;color:var(--ink3);margin-bottom:10px">Real progressions through the attendance escalation ladder</div>
+        <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:1px">Shilazia Kennedy</div>
+              <div style="font-size:10px;color:var(--ink3)">TL: Steven Burns</div>
+            </div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#c2410c">Stage 3 of 3</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:8px">
+            <div style="flex:1;text-align:center;padding:4px 6px;background:var(--green-bg);color:var(--green);border:0.5px solid #86efac;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Memo</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--amber-bg);color:var(--amber);border:0.5px solid #fcd34d;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Written</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:#ffe4d6;color:#c2410c;border:0.5px solid #fdba74;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Final</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--surface2);color:var(--ink3);border:0.5px dashed var(--border);border-radius:5px;font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;opacity:0.4">Term</div>
+          </div>
+          <div style="font-size:10px;color:var(--ink2);line-height:1.4;font-style:italic">On final warning · one absence away from termination</div>
+        </div>
+        <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:1px">Tatiera Grandberry</div>
+              <div style="font-size:10px;color:var(--ink3)">TL: Sean Lockmon</div>
+            </div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#c2410c">Stage 2 of 2</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:8px">
+            <div style="flex:1;text-align:center;padding:4px 6px;background:var(--surface2);color:var(--ink3);border:0.5px dashed var(--border);border-radius:5px;font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;opacity:0.4">Memo</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--amber-bg);color:var(--amber);border:0.5px solid #fcd34d;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Written</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:#ffe4d6;color:#c2410c;border:0.5px solid #fdba74;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Final</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--surface2);color:var(--ink3);border:0.5px dashed var(--border);border-radius:5px;font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;opacity:0.4">Term</div>
+          </div>
+          <div style="font-size:10px;color:var(--ink2);line-height:1.4;font-style:italic">4 absences · ladder protocol triggered Final Written escalation</div>
+        </div>
+        <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:1px">Jeffrey Boyd</div>
+              <div style="font-size:10px;color:var(--ink3)">TL: Areanna Kelley</div>
+            </div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--amber)">Stage 2 of 2</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:8px">
+            <div style="flex:1;text-align:center;padding:4px 6px;background:var(--green-bg);color:var(--green);border:0.5px solid #86efac;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Memo</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--amber-bg);color:var(--amber);border:0.5px solid #fcd34d;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Written</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--surface2);color:var(--ink3);border:0.5px dashed var(--border);border-radius:5px;font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;opacity:0.4">Final</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--surface2);color:var(--ink3);border:0.5px dashed var(--border);border-radius:5px;font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;opacity:0.4">Term</div>
+          </div>
+          <div style="font-size:10px;color:var(--ink2);line-height:1.4;font-style:italic">3 absences · graduated from counseling memo to written warning</div>
+        </div>
+        <div style="background:var(--surface);border:0.5px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:1px">Jessica McCafferty</div>
+              <div style="font-size:10px;color:var(--ink3)">TL: unassigned</div>
+            </div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--red)">Stage 3 of 3</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:8px">
+            <div style="flex:1;text-align:center;padding:4px 6px;background:var(--surface2);color:var(--ink3);border:0.5px dashed var(--border);border-radius:5px;font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;opacity:0.4">Memo</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--amber-bg);color:var(--amber);border:0.5px solid #fcd34d;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Written</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:#ffe4d6;color:#c2410c;border:0.5px solid #fdba74;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Final</div><div style="display:flex;align-items:center;color:var(--ink3);font-size:12px">→</div><div style="flex:1;text-align:center;padding:4px 6px;background:var(--red-bg);color:var(--red);border:0.5px solid #f0a0a0;border-radius:5px;font-size:9px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Term</div>
+          </div>
+          <div style="font-size:10px;color:var(--ink2);line-height:1.4;font-style:italic">5 absences · full cycle through to termination</div>
+        </div>
+        </div>
+
+      </div>
+
+      <!-- ROW 4: At-risk roster -->
+      <div class="inner-card">
+        <div class="ic-label">At-risk roster · final warning + termination (11 agents)</div>
+        <div style="font-size:11px;color:var(--ink3);margin-bottom:10px">The watch list — these are the conversations TLs and Ops need to be having this week</div>
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border)">
+              <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Agent</th>
+              <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Team lead</th>
+              <th style="text-align:center;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Current action</th>
+              <th style="text-align:center;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Absences</th>
+              <th style="text-align:left;padding:8px 12px;font-size:10px;font-weight:600;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase">Dates</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Arianna Gier</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)"><span style="color:var(--ink3);font-style:italic">unassigned</span></td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--red-bg);color:var(--red);padding:3px 8px;border-radius:4px;border:0.5px solid #f0a0a0">Termination</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">6</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">4/7/26,4/9/26, 4/11/26,4/13/26,4/14</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Jessica McCafferty</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)"><span style="color:var(--ink3);font-style:italic">unassigned</span></td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--red-bg);color:var(--red);padding:3px 8px;border-radius:4px;border:0.5px solid #f0a0a0">Termination</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">5</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/31, 4/1, 4/4, 4/18, 4/22</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Stephanie Lee</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)"><span style="color:var(--ink3);font-style:italic">unassigned</span></td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--red-bg);color:var(--red);padding:3px 8px;border-radius:4px;border:0.5px solid #f0a0a0">Termination</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">5</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">4/9/26, 4/10,26, 4/13/26, 4/14/26, </td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">David Holmes</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Steven Burns</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">5</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/3, 3/4, 3/16, 3/18, 3/28</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Tatiera Grandberry</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Sean Lockmon</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/3/26, 3/6/26, 3/26/26, 3/31/26</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Shilazia Kennedy</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Steven Burns</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/16, 3/25, 4/11, 4/21</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Regan Lay</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)"><span style="color:var(--ink3);font-style:italic">unassigned</span></td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/4, 3/10, 3/23, 3/28</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Meaghan Garman</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Estella Cooper</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">4/3/26, 4/4/26, 4/14/26, 4/15/26</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Conor Lay</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Estella Cooper</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/10/26, 3/12/26, 3/23/26, 4/10/26</td>
+            </tr>
+            <tr style="background:var(--surface);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Latishia Morioni</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Steven Burns</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">4</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">4/8, 4/9, 4/16, 4/21</td>
+            </tr>
+            <tr style="background:var(--surface2);border-bottom:0.5px solid var(--border)">
+              <td style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--ink)">Amy Gerry</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink2)">Stephen Wehrheim</td>
+              <td style="padding:8px 12px;text-align:center"><span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#ffe4d6;color:#c2410c;padding:3px 8px;border-radius:4px;border:0.5px solid #fdba74">Final warning</span></td>
+              <td style="padding:8px 12px;text-align:center;font-size:13px;font-family:var(--mono);font-weight:600;color:var(--ink)">2</td>
+              <td style="padding:8px 12px;font-size:11px;color:var(--ink3);font-family:var(--mono)">3/26, 3/27</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    `
+  },
+
+  // ─── STATION 5: FUTURE STATE ──────────────────────────────────────────────
   {
     future: true,
     icon: "🔭",
-    eyebrow: "Station 4 of 4 · Where we are going",
+    eyebrow: "Station 5 of 5 · Where we are going",
     title: "Enhancement mode — the next 4–6 weeks",
     shortLabel: "Future state",
     desc: "The last 90 days were about setting up shop — training waves, headcount, foundational systems. We're now entering steady state. This is what we're building next.",
